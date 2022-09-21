@@ -1,8 +1,15 @@
-import React from 'react'
+import React from 'react';
+import MainVisual from './MainVisual';
+import MainContent from './MainContent';
+import Customer from './Customer';
 
 const Main = () => {
     return (
-        <div>Main</div>
+        <main className='Main'>
+            <MainVisual />
+            <MainContent />
+            <Customer />
+        </main>
     )
 }
 

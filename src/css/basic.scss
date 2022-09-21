@@ -1,0 +1,74 @@
+$color-main : #032777;
+$color-g : #dddddd;
+$font-s : 14px;
+$font-m : 17px;
+$font-l: 20px;
+
+
+body {
+    overflow-x: hidden;
+}
+
+.Wrapper {
+    min-width: 1700px;
+}
+
+.inner {
+    width: 1170px;
+    margin: 0 auto;
+}
+
+
+
+.Header {
+    .top_bar {
+        border-bottom: 1px solid $color-g;
+        font-size: $font-s;
+        font-weight: 500;
+
+        .inner {
+            justify-content: flex-end;
+            line-height: 30px;
+
+            li {
+                border-right: 1px solid $color-g;
+                padding: 0 10px;
+            }
+        }
+    }
+
+    .inner {
+        display: flex;
+        justify-content: space-between;
+
+        ul {
+            display: flex;
+            gap: 50px;
+            line-height: 90px;
+            font-size: $font-l;
+            font-weight: 500;
+        }
+
+        a {
+            position: relative;
+            display: block;
+        }
+
+        a::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            transform: translateX(-50%);
+            background: $color-main;
+        }
+
+        &.active::after {
+            width: 100%;
+            transition: 0.3s;
+        }
+    }
+
+}
