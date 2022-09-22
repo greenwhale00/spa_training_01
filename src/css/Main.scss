@@ -1,3 +1,7 @@
+* {
+    // outline: 1px dashed lime;
+}
+
 .MainVisual {
     position: relative;
     height: 650px;
@@ -23,6 +27,152 @@
         margin: 0 0 0 50px;
     }
 
+    .main_link {
+        position: absolute;
+        bottom: -100px;
+        left: 50%;
+        display: flex;
+        transform: translateX(-50%);
+        //background: thistle;
+
+        li {
+            flex: 1;
+
+            &:last-child {
+                flex: 2;
+            }
+
+            &>a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 200px;
+                //background: url(../../public/assetes/imges/icon_set_w.png);
+            }
+
+            .case {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: center;
+                width: 100px;
+                height: 130px;
+                color: #fff;
+                background: url(../../public/assetes/imges/icon_set_w.png);
+                background-repeat: no-repeat;
+                white-space: nowrap;
+            }
+        }
+
+        $bg-color : tomato,
+        green,
+        #369,
+        #756,
+        #fff;
+
+        @for $i from 1 to 5 {
+            li:nth-child(#{$i}) .case {
+                background-position-x: ($i - 1) * -100px;
+            }
+        }
+
+        @each $bg in $bg-color {
+            $index: index($bg-color, $bg);
+
+            li:nth-child(#{$index}) {
+                background-color: $bg;
+            }
+        }
+    }
+
+    .customer {
+        position: relative;
+        $color: #337689;
+        padding: 50px 30px 0 0;
+        text-align: right;
+
+        strong {
+            display: block;
+            font-size: 40px;
+            font-weight: 600;
+            margin: 0 0 15px 0;
+            color: $color;
+        }
+
+        p {
+            line-height: 1.45;
+        }
+
+        i {
+            position: absolute;
+            top: -30px;
+            right: 30px;
+            background: $color;
+            color: #fff;
+            font-size: 40px;
+            padding: 10px;
+            border-radius: 50%;
+        }
+    }
+
+}
+
+.MainContent {
+    padding: 150px 0 100px 0;
+
+    .inner {
+        display: flex;
+        gap: 30px;
+
+        &>* {
+            flex: 1;
+        }
+
+        figure {
+            margin: 0 0 30px 0;
+            border-radius: 50px 0;
+            overflow: hidden;
+        }
+
+        strong {
+            position: relative;
+            display: block;
+            font-size: 25px;
+            margin: 0 0 30px 0;
+
+            &::before {
+                content: "MORE";
+                position: absolute;
+                top: -50px;
+                right: 30px;
+                background: rgb(244, 202, 78, 0.7);
+                color: #fff;
+                //padding: 20px 10px;
+                border-radius: 50%;
+                font-size: 15px;
+                font-weight: 700;
+                width: 50px;
+                height: 50px;
+                text-align: center;
+                line-height: 50px;
+            }
+
+            &::after {
+                content: "";
+                display: block;
+                width: 60px;
+                height: 1px;
+                background: #da544b;
+                margin: 15px 0;
+            }
+
+        }
 
 
+        p {
+            font-size: 13px;
+            font-weight: 500;
+
+        }
+    }
 }
