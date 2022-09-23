@@ -77,3 +77,18 @@
         border-top: 1px solid #ddd;
     }
 }
+
+
+
+
+.Footer {
+    border-top: 1px solid #ddd;
+    padding: 50px 0;
+    text-align: center;
+    background: #f4f4f4;
+
+    li {
+        display: inline-block;
+        margin: 0 5px;
+    }
+}
