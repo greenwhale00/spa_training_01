@@ -13,9 +13,6 @@ import { Route, Routes } from 'react-router-dom';
 import './css/basic.scss';
 
 
-
-
-
 const App = () => {
 
   const MAINSLIDER = [
