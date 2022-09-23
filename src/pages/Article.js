@@ -1,8 +1,10 @@
 import React from 'react'
 
-const Article = () => {
+const Article = ({ content, num }) => {
     return (
-        <article>Article</article>
+        <article>
+            {content[num].tit}
+        </article>
     )
 }
 

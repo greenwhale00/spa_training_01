@@ -1,17 +1,17 @@
 import React from 'react'
 import Article from './Article'
 import Aside from './Aside'
+import '../css/Subpage.scss'
 
-const Sub01 = () => {
+const Sub01 = ({ content }) => {
+    const num = 0;
     return (
         <div className='Subpage'>
             <div className="nav_bar">
-                <div className="inner">
-                    page표시
-                </div>
+                <div className="inner">{content[num].tit} / {content[0].tit}</div>
             </div>
-            <div className="inner">
-                <Article />
+            <div className="inner sub">
+                <Article content={content} />
                 <Aside />
             </div>
         </div>
