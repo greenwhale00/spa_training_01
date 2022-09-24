@@ -1,16 +1,15 @@
-$color-main : #032777;
-$color-g : #dddddd;
-$font-s : 14px;
-$font-m : 17px;
-$font-l: 20px;
-
+$main-color: #032777;
+$color-gray : #dddddd;
+$font-small : 13px;
+$font-midume : 17px;
+$font-big : 20px;
 
 body {
     overflow-x: hidden;
 }
 
 .Wrapper {
-    min-width: 1700px;
+    min-width: 1170px;
 }
 
 .inner {
@@ -19,11 +18,10 @@ body {
 }
 
 
-
 .Header {
-    .top_bar {
-        border-bottom: 1px solid $color-g;
-        font-size: $font-s;
+    .top__bar {
+        border-bottom: 1px solid $color-gray;
+        font-size: $font-small;
         font-weight: 500;
 
         .inner {
@@ -31,7 +29,7 @@ body {
             line-height: 30px;
 
             li {
-                border-right: 1px solid $color-g;
+                border-right: 1px solid $color-gray;
                 padding: 0 10px;
             }
         }
@@ -45,30 +43,29 @@ body {
             display: flex;
             gap: 50px;
             line-height: 90px;
-            font-size: $font-l;
+            font-size: $font-big;
             font-weight: 500;
         }
 
         a {
             position: relative;
             display: block;
-        }
 
-        a::after {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            width: 0;
-            height: 2px;
-            transform: translateX(-50%);
-            background: $color-main;
-        }
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                width: 0;
+                height: 2px;
+                transform: translateX(-50%);
+                background: $main-color;
+            }
 
-        &.active::after {
-            width: 100%;
-            transition: 0.3s;
+            &.active::after {
+                width: 100%;
+                transition: 0.3s;
+            }
         }
     }
-
 }
